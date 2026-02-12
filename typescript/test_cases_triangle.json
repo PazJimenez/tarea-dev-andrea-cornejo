@@ -1,0 +1,33 @@
+{
+  "testCases": [
+    {
+      "panelW": 5.5,
+      "panelH": 2,
+      "roofB": 14,
+      "roofH": 16.583,
+      "expected": 6
+    },
+    {
+      "panelW": 8,
+      "panelH": 20,
+      "roofB": 14,
+      "roofH": 16.583,
+      "expected": 0
+    },
+    {
+      "panelW": 10,
+      "panelH": 1,
+      "roofB": 14,
+      "roofH": 16.583,
+      "expected": 6
+    },
+    {
+      "panelW": 10,
+      "panelH": 1,
+      "roofB": 27,
+      "roofH": 8.588,
+      "expected": 7
+    }
+
+  ]
+}

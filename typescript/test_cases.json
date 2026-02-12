@@ -1,0 +1,74 @@
+{
+  "testCases": [
+    {
+      "panelW": 1,
+      "panelH": 2,
+      "roofW": 2,
+      "roofH": 4,
+      "expected": 4
+    },
+    {
+      "panelW": 1,
+      "panelH": 2,
+      "roofW": 3,
+      "roofH": 5,
+      "expected": 7
+    },
+    {
+      "panelW": 2,
+      "panelH": 2,
+      "roofW": 1,
+      "roofH": 10,
+      "expected": 0
+    },
+    {
+      "panelW": 5,
+      "panelH": 2,
+      "roofW": 1,
+      "roofH": 2,
+      "expected": 0
+    },
+    {
+      "panelW": 2,
+      "panelH": 4,
+      "roofW": 5,
+      "roofH": 10,
+      "expected": 5
+    },
+    {
+      "panelW": 2,
+      "panelH": 4,
+      "roofW": 10,
+      "roofH": 5,
+      "expected": 5
+    },
+    {
+      "panelW": 4,
+      "panelH": 2,
+      "roofW": 10,
+      "roofH": 5,
+      "expected": 5
+    },
+    {
+      "panelW": 1,
+      "panelH": 2,
+      "roofW": 4,
+      "roofH": 5,
+      "expected": 10
+    },
+    {
+      "panelW": 1,
+      "panelH": 3,
+      "roofW": 6,
+      "roofH": 5,
+      "expected": 10
+    },
+    {
+      "panelW": 3,
+      "panelH": 5,
+      "roofW": 7,
+      "roofH": 13,
+      "expected": 5
+    }
+  ]
+}
