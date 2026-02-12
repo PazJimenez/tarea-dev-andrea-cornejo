@@ -94,5 +94,5 @@ Para el caso del techo triangular, me basé en la ecuación de la recta, pues in
 
 A la función de cálculo del techo triangular le falta determinar que pasa en casos donde quepan rectángulos cercanos al vértice del triángulo.
 
-Tuve un problema con el control de versiones lo que me impidió mostrar todo el proceso de desarrollo el github.
+Tuve un problema con el control de versiones lo que me impidió mostrar todo el proceso de desarrollo en github.
 
