@@ -90,7 +90,7 @@ Decidí validar la cantidad de rectángulos que caben en el techo utilizando geo
 
 En un inicio, para el caso del techo rectángular, estaba calculando usando como referencia el área de los rectángulos. Este enfoque no era correcto en casos donde sobraba un espacio muy largo, pero delgado dentro del techo.
 
-Para el caso del techo triangular, me base en la ecuación de la recta, pues interpreté el techo como un plano cartesiano, con el (0,0) puesto en la intersección de la altura con la base del triángulo. 
+Para el caso del techo triangular, me basé en la ecuación de la recta, pues interpreté el techo como un plano cartesiano, con el (0,0) puesto en la intersección de la altura con la base del triángulo. 
 
-A la función de calculo del techo triangular le falta determinar que pasa en casos donde quepan rectángulos cercanos al vértice del triángulo.
+A la función de cálculo del techo triangular le falta determinar que pasa en casos donde quepan rectángulos cercanos al vértice del triángulo.
 
