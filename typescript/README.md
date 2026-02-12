@@ -47,7 +47,7 @@ Los siguientes else if validan si no cupo ningún panel volteado a lo largo o an
 
 En el return multiplico los paneles que caben a lo largo y ancho (sin voltear) y les sumo la cuenta de paneles rotados.
 
-Deja acá el link a tu video explicando tu solución con tus palabras
+(https://youtu.be/BNwCbuYsf20)
 
 ---
 
@@ -93,4 +93,6 @@ En un inicio, para el caso del techo rectángular, estaba calculando usando como
 Para el caso del techo triangular, me basé en la ecuación de la recta, pues interpreté el techo como un plano cartesiano, con el (0,0) puesto en la intersección de la altura con la base del triángulo. 
 
 A la función de cálculo del techo triangular le falta determinar que pasa en casos donde quepan rectángulos cercanos al vértice del triángulo.
+
+Tuve un problema con el control de versiones lo que me impidió mostrar todo el proceso de desarrollo el github.
 
