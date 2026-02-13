@@ -53,11 +53,11 @@ function calculatePanels(
       //console.log("newHeight1:", newHeight);
     }
 
-    if (newHeight == 0 && newWidth >= panelHeight) {
+    if (newHeight < panelWidth && newWidth >= panelHeight) {
       newHeight = roofHeight
     }
 
-    if (newWidth == 0 && newHeight >= panelWidth) {
+    if (newWidth < panelHeight && newHeight >= panelWidth) {
       newWidth = roofWidth
     }
 
@@ -121,7 +121,7 @@ function calculatePanelsTriangle(
 ): number {
 
   var factorPendienteAcostado = (((((panelHeight - roofHeight) * ((-roofBase)/2))/roofHeight)) * 2) - roofBase
-  console.log("primerRectAcostado:", factorPendienteAcostado);  
+  //console.log("primerRectAcostado:", factorPendienteAcostado);  
 
   // factorPendienteAcostado son las unidades de espacio que se pierden entre el primer 
   // rectángulo puesto sobre la base, apoyado en el lado del triángulo
@@ -138,7 +138,7 @@ function calculatePanelsTriangle(
   //            Este espacio a ambos lados (*2)
 
   var factorPendienteParado = (((roofHeight/(-roofBase/2)) * (panelHeight/2) + roofHeight)) - roofHeight
-  console.log("primerRectParado:", factorPendienteParado);  
+  //console.log("primerRectParado:", factorPendienteParado);  
 
   // factorPendienteParado son las unidades de espacio que se pierden entre el primer 
   // rectángulo puesto sobre la linea de la altura y el vertice superior del triángulo 
@@ -148,6 +148,9 @@ function calculatePanelsTriangle(
   //   /|   |\ 
   //  /_|___|_\ 
   // /|   |   |\   
+
+
+
 
   if (
     panelWidth < 0 ||
@@ -163,11 +166,8 @@ function calculatePanelsTriangle(
 
     var countWidth = 0
     var countHeight = 1
-    var rotationCountWidth = 0
-    var rotationCountHeight = 0
-    var finalRotationCount = 0
     let newWidth = roofBase + factorPendienteAcostado
-    let newHeight = roofHeight + factorPendienteParado
+    let newHeight = roofHeight //+ factorPendienteParado
     let newWidthescalon = 0
 
     while (newWidth >= panelWidth && newHeight >= panelHeight) {
@@ -201,9 +201,35 @@ function calculatePanelsTriangle(
     }*/
   }
 
-  console.log("newWidth final", newWidth)
-  console.log("newHeight final", newHeight)
-    return countWidth 
+  //console.log("newWidth final", newWidth)
+  //console.log("newHeight final", newHeight)
+
+      var factorPendienteVolteado =   (((((panelWidth - roofHeight) * ((-roofBase)/2))/roofHeight)) * 2) - roofBase
+      //console.log("primerRectParado:", factorPendienteVolteado);  
+
+      //console.log("newWidht antes de voltear"+ newWidth)
+      newWidth = newWidth - factorPendienteAcostado
+      var countWidthVolteado = 0
+      newWidth = newWidth + factorPendienteVolteado
+
+      while (newWidth >= panelHeight && newHeight >= panelWidth) {
+
+
+      newHeight = newHeight - panelWidth
+      newWidthescalon = newWidth
+
+      while (newWidthescalon >= panelHeight) {
+        newWidthescalon = newWidthescalon - panelHeight
+        countWidthVolteado++;
+
+     } 
+
+      countHeight++
+      newWidth = roofBase + (factorPendienteVolteado * countHeight)
+    }
+    //console.log("countWidth ", countWidth)
+    //console.log("countWidthVolteado ", countWidthVolteado)
+    return countWidth + countWidthVolteado
 }
 
 
